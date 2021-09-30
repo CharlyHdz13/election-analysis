@@ -19,6 +19,10 @@ total_votes = 0
 
 candidate_options=[]
 
+# Initialize candidate votes dictionary
+
+candidate_votes ={}
+
 #Open the election results and read the file
 
 with open(file_to_load) as election_data:
@@ -42,12 +46,20 @@ with open(file_to_load) as election_data:
 
         candidate_name = row[2]
 
-        #If the candidate does not match any existing candidate...
+        # If the candidate does not match any existing candidate...
         if candidate_name not in candidate_options:
 
             # Add the candidate name to the candidate list
 
             candidate_options.append(candidate_name)
+
+            # Begin tracking that candidate's vote count
+
+            candidate_votes[candidate_name]=0
+
+        # Add a vote to that candidate's count
+
+        candidate_votes[candidate_name] += 1
         
 
 # Print the total votes
@@ -58,7 +70,9 @@ print(f'The number of total votes is: {total_votes}')
 
 print(candidate_options)
 
+# Print the candidate vote dictionary
 
+print(candidate_votes)
 # Using the with statement open the file as a text file.
 
 # with open(file_to_save,'w') as txt_file:
