@@ -27,7 +27,26 @@ Counting is a very tedious task humans do not like to do. Now counting is very i
   After the for loop ends we will get the exact amount of votes of the election which were: 369,711.
 
 - Breakdown of the number of votes and the percentage of total votes for each county in the precinct.
+  
+  How the algorithm works for to obtain this data from the csv file is as follows. First of an empty list and an empty dictionary were initialized before the `with` statement where I read the file.
+  
+  ![image](https://user-images.githubusercontent.com/89402038/135734135-a25a8432-8844-4ed9-9bcf-83e5f7e3dc5f.png)
+  
+  The list "counties" will save the names for every county in the file and the dictionary "county_votes" will have as keys the names of the counties and as values the number of votes casted in that county. To do this a variable named county_name was declared inside the for loop inside the `with` statement and was asigned the value of the second position of the list "row".
+  
+  ![image](https://user-images.githubusercontent.com/89402038/135734200-05b3331d-2b1b-4d86-a832-c0c6c7323bd6.png)
+  
+  After that an `if` statement is used to determine if the variable "county_name" is already in the list "counties", using the `not in` conditional. If the county is not in the list then it will be appended onto the list and also it will start tracking the number of votes in the dictionary. If the county is already in the list then it will only be added one vote onto the value in the dictionary tracking the number of votes casted in that county.
+  
+  ![image](https://user-images.githubusercontent.com/89402038/135734323-a3a88d5d-cced-4cd3-b053-964151444c61.png)
+  
+  I now print or write the values obtained through the algorithm and obtain the following:
+  
+  ![image](https://user-images.githubusercontent.com/89402038/135734357-fb7afcd9-d25b-4d3f-b72c-5a459872e15a.png)
+  
 - Which county had the largest number of votes?
+  
+  At first glance it is very easy to see from the previous image which county had the biggest turnout, but what if this was not the case and we had very tight numbers between counties or had lots of counties? Then the following is an efficient way to solve that problem. 
 - Breakdown of the number of votes and the percentage of the total votes each candidate received.
 - Which candidate won the election, what was their vote count, and what was their percentage of total votes?
 ## Election-Audit Summary
