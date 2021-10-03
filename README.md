@@ -71,4 +71,5 @@ Counting is a very tedious task humans do not like to do. Now counting is very i
   ![image](https://user-images.githubusercontent.com/89402038/135734903-2e50b913-90be-4851-972d-a4e169bc3e7d.png)
   
 ## Election-Audit Summary
+The code is able to succesfully determine the winner of an election and the amount of votes for each county. This code can be easily used for any other election, bigger or smaller. The only important changes that should be made to the code is to add more variables which save this other entities that we want to track. For example, in a bigger election we would also like to focus on the states or in a smaller election perhaps divide by districs. 
 
