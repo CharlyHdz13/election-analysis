@@ -59,5 +59,16 @@ Counting is a very tedious task humans do not like to do. Now counting is very i
   ![image](https://user-images.githubusercontent.com/89402038/135734850-7b569bc4-3d58-4d4f-be05-c392264dd881.png)
   
 - Breakdown of the number of votes and the percentage of the total votes each candidate received.
+  
+  This was made the same way as for the counties but focusing on the candidates instead of the counties. The results obtained where the following:
+  
+  ![image](https://user-images.githubusercontent.com/89402038/135734889-e5e5834c-3ae8-4e39-9486-7123acaac2a1.png)
+  
 - Which candidate won the election, what was their vote count, and what was their percentage of total votes?
+  
+  In the same style as for the county with the largest turnout, the same algorithm was used to determine the winner of the election. 
+  
+  ![image](https://user-images.githubusercontent.com/89402038/135734903-2e50b913-90be-4851-972d-a4e169bc3e7d.png)
+  
 ## Election-Audit Summary
+
