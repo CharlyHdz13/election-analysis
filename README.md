@@ -20,19 +20,19 @@ Counting is a very tedious task humans do not like to do. Now counting is very i
   
   ![image](https://user-images.githubusercontent.com/89402038/135728606-13714aa9-ca25-487e-8b55-aaf3a3d2a703.png)
   
-  To now count the total amount of votes, I used a for loop using the "reader" as the collection. Inside the for I added 1 to the previous value of `total_votes` as follows:
+  To now count the total amount of votes, I used a `for` loop using the "reader" as the collection. Inside the `for` I added 1 to the previous value of `total_votes` as follows:
   
   ![image](https://user-images.githubusercontent.com/89402038/135728755-ef037067-9f8a-4ec1-a8af-3204ea731d59.png)
   
-  After the for loop ends we will get the exact amount of votes of the election which were: 369,711.
+  After the `for` loop ends we will get the exact amount of votes of the election which were: 369,711.
 
 - Breakdown of the number of votes and the percentage of total votes for each county in the precinct.
   
-  How the algorithm works for to obtain this data from the csv file is as follows. First of an empty list and an empty dictionary were initialized before the `with` statement where I read the file.
+  How the algorithm works to obtain this data from the csv file is as follows. First of an empty list and an empty dictionary were initialized before the `with` statement where I read the file.
   
   ![image](https://user-images.githubusercontent.com/89402038/135734135-a25a8432-8844-4ed9-9bcf-83e5f7e3dc5f.png)
   
-  The list "counties" will save the names for every county in the file and the dictionary "county_votes" will have as keys the names of the counties and as values the number of votes casted in that county. To do this a variable named county_name was declared inside the for loop inside the `with` statement and was asigned the value of the second position of the list "row".
+  The list "counties" will save the names for every county in the file and the dictionary "county_votes" will have as keys the names of the counties and as values the number of votes casted in that county. To do this a variable named county_name was declared inside the `for` loop inside the `with` statement and was asigned the value of the second position of the list "row".
   
   ![image](https://user-images.githubusercontent.com/89402038/135734200-05b3331d-2b1b-4d86-a832-c0c6c7323bd6.png)
   
@@ -46,7 +46,18 @@ Counting is a very tedious task humans do not like to do. Now counting is very i
   
 - Which county had the largest number of votes?
   
-  At first glance it is very easy to see from the previous image which county had the biggest turnout, but what if this was not the case and we had very tight numbers between counties or had lots of counties? Then the following is an efficient way to solve that problem. 
+  At first glance it is very easy to see from the previous image which county had the biggest turnout, but what if this was not the case and we had very tight numbers between counties or had lots of counties? Then the following is an efficient way to solve that problem. First two variables were declared: one empty string "county_largest_turnout" and an integer, "county_largest_turnout_votes", with its default value as zero. 
+  
+  ![image](https://user-images.githubusercontent.com/89402038/135734770-822eb256-644c-48ef-a2ba-3e928057d889.png)
+  
+  Now using a `for` loop I iterate through the dictionary "county_votes" where the number of votes are stored for each county. With an `if` statement I check if the number of votes of the actual county is greater than the variable "country_largest_turnout_votes" if true then this varible is assigned the new value.
+  
+  ![image](https://user-images.githubusercontent.com/89402038/135734832-8f70b43f-ab52-40b8-adbb-291f05e0f37b.png)
+  
+  With this we now can print easyily the following:
+  
+  ![image](https://user-images.githubusercontent.com/89402038/135734850-7b569bc4-3d58-4d4f-be05-c392264dd881.png)
+  
 - Breakdown of the number of votes and the percentage of the total votes each candidate received.
 - Which candidate won the election, what was their vote count, and what was their percentage of total votes?
 ## Election-Audit Summary
